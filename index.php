@@ -1,3 +1,38 @@
+<?php
+	require_once "php/language_class.php";
+	error_reporting(E_ALL);
+	ini_set("display_errors", 1);
+
+	function getLanguage() {
+		preg_match_all('/([a-z]{1,8}(?:-[a-z]{1,8})?)(?:;q=([0-9.]+))?/', strtolower($_SERVER["HTTP_ACCEPT_LANGUAGE"]), $matches); // Получаем массив $matches с соответствиями
+		$langs = array_combine($matches[1], $matches[2]); // Создаём массив с ключами $matches[1] и значениями $matches[2]
+		foreach ($langs as $n => $v)
+			$langs[$n] = $v ? $v : 1; // Если нет q, то ставим значение 1
+		arsort($langs); // Сортируем по убыванию q
+		$default_lang = key($langs); // Берём 1-й ключ первого (текущего) элемента (он же максимальный по q)
+		// Выводим язык по умолчанию
+		if (strpos($default_lang, "ru") !== false) return "ru";
+		elseif (strpos($default_lang, "en") !== false) return "en";
+	}
+	
+
+	
+
+	// $my_lang = $_COOKIE['mylang'];
+	if(isset($_COOKIE["language"]))
+	{
+		$language = htmlspecialchars($_COOKIE["language"]);
+	} else {
+		$language = getLanguage();   // при первом запуске определяем предпочитаемый язык пользователя
+		// $language = "en";
+		setcookie("language", $language);
+		
+	}
+	// setcookie("language", "ru");
+	
+	$lang = new Language($language); 
+?>
+
 <!DOCTYPE html>
 <!--[if IE 8 ]><html class="no-js oldie ie8" lang="en"> <![endif]-->
 <!--[if IE 9 ]><html class="no-js oldie ie9" lang="en"> <![endif]-->
@@ -43,7 +78,7 @@
    			<a class="menu-toggle" href="#"><span>Menu</span></a>
 
 	   		<div class="logo">
-		         <a href="index.html">Меню</a>
+		         <a href="index.php">Меню</a>
 		      </div>		      
 
 		   	<nav id="main-nav-wrap">
@@ -74,15 +109,18 @@
    			<div class="col-twelve">
 
 	   			<h5>Hello, World.</h5>
-	   			<h1>Я Павел Остаточников</h1>
+	   			<h1><?=$lang->get("INTRO_NAME") ?></h1>
 
 	   			<p class="intro-position">
-	   				<span>Front-end Developer</span>
-	   				<span>UI/UX Designer</span> 
+	   				<span><?=$lang->get("INTRO_POSITION_1") ?></span>
+	   				<span><?=$lang->get("INTRO_POSITION_2") ?></span> 
 	   			</p>
 
-	   			<a class="button stroke smoothscroll" href="#about" title="">Обо мне</a>
-
+	   			<a class="button stroke smoothscroll" href="#about" title=""><?=$lang->get("INTRO_ABOUT_BTN") ?></a>
+				<form method="post">
+					<input type="submit" name="set_en_lang" value="English" onclick="document.cookie = 'language=en'"/>
+					<input type="submit" name="set_ru_lang" value="Русский" onclick="document.cookie = 'language=ru'"/>
+				</form>
 	   		</div>  
    			
    		</div>   		 		
@@ -106,8 +144,8 @@
    	<div class="row section-intro">
    		<div class="col-twelve">
 
-   			<h5>Обо мне</h5>
-   			<h1>Let me introduce myself.</h1>
+   			<h5><?=$lang->get("ABOUT_HEADER_H5_ABOUT") ?></h5>
+   			<h1><?=$lang->get("ABOUT_HEADER_H1_INTRODUCE") ?></h1>
 
    			<div class="intro-info">
 
