@@ -42,7 +42,7 @@
    <!--- basic page needs
    ================================================== -->
    <meta charset="utf-8">
-	<title>Kards</title>
+	<title><?=$lang->get("HEAD_META_TITLE") ?></title>
 	<meta name="description" content="">  
 	<meta name="author" content="">
 
@@ -75,21 +75,20 @@
    	<div class="row">
 
    		<div class="top-bar">
-   			<a class="menu-toggle" href="#"><span>Menu</span></a>
+   			<a class="menu-toggle" href="#"><span><?=$lang->get("HEADER_MENU-TOGGLE_SPAN") ?></span></a>
 
-	   		<div class="logo">
-		         <a href="index.php">Меню</a>
-		      </div>		      
+	   		<!-- <div class="logo"> -->
+		         <!-- <a href="index.php">Меню</a> -->
+		      <!-- </div>		       -->
 
 		   	<nav id="main-nav-wrap">
 					<ul class="main-navigation">
-						<li class="current"><a class="smoothscroll"  href="#intro" title="">Начало</a></li>
-						<li><a class="smoothscroll"  href="#about" title="">Обо мне</a></li>
-						<li><a class="smoothscroll"  href="#resume" title="">Резюме</a></li>
-						<li><a class="smoothscroll"  href="#portfolio" title="">Портфолио</a></li>
-						<li><a class="smoothscroll"  href="#services" title="">Услуги</a></li>					
-						<li><a class="smoothscroll"  href="#contact" title="">Контакты</a></li>	
-						<li><a href="styles.html" title="">Style Demo</a></li>				
+						<li class="current"><a class="smoothscroll"  href="#intro" title=""><?=$lang->get("HEADER_MAIN-NAVIGATION_LI_HOME") ?></a></li>
+						<li><a class="smoothscroll"  href="#about" title=""><?=$lang->get("HEADER_MAIN-NAVIGATION_LI_ABOUT") ?></a></li>
+						<li><a class="smoothscroll"  href="#resume" title=""><?=$lang->get("HEADER_MAIN-NAVIGATION_LI_RESUME") ?></a></li>
+						<li><a class="smoothscroll"  href="#portfolio" title=""><?=$lang->get("HEADER_MAIN-NAVIGATION_LI_PORTOLIO") ?></a></li>
+						<li><a class="smoothscroll"  href="#services" title=""><?=$lang->get("HEADER_MAIN-NAVIGATION_LI_SERVICES") ?></a></li>					
+						<li><a class="smoothscroll"  href="#contact" title=""><?=$lang->get("HEADER_MAIN-NAVIGATION_LI_CONTACTS") ?></a></li>	
 					</ul>
 				</nav>    		
    		</div> <!-- /top-bar --> 
@@ -108,12 +107,11 @@
 
    			<div class="col-twelve">
 
-	   			<h5>Hello, World.</h5>
+	   			<h5><?=$lang->get("INTRO_INTRO-CONTENT_H5") ?></h5>
 	   			<h1><?=$lang->get("INTRO_NAME") ?></h1>
 
 	   			<p class="intro-position">
 	   				<span><?=$lang->get("INTRO_POSITION_1") ?></span>
-	   				<span><?=$lang->get("INTRO_POSITION_2") ?></span> 
 	   			</p>
 
 	   			<a class="button stroke smoothscroll" href="#about" title=""><?=$lang->get("INTRO_ABOUT_BTN") ?></a>
@@ -127,11 +125,10 @@
    	</div> <!-- /intro-content --> 
 
    	<ul class="intro-social">        
-         <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-         <li><a href="#"><i class="fa fa-behance"></i></a></li>
-         <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-         <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
-         <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+         <li><a href="https://www.linkedin.com/in/pavel-o/"><i class="fa fa-linkedin"></i></a></li>
+         <li><a href="https://www.facebook.com/profile.php?id=100014807746891"><i class="fa fa-facebook"></i></a></li>
+         <li><a href="https://vk.com/ostatochnikov85"><i class="fa fa-vk"></i></a></li>
+         <li><a href="https://www.instagram.com/info_producer_ostatochnikov/"><i class="fa fa-instagram"></i></a></li>
       </ul> <!-- /intro-social -->      	
 
    </section> <!-- /intro -->
@@ -151,7 +148,7 @@
 
    				<img src="images/profile-pic.jpg" alt="Profile Picture">
 
-   				<p class="lead">Lorem ipsum Exercitation culpa qui dolor consequat exercitation fugiat laborum ex ea eiusmod ad do aliqua occaecat nisi ad irure sunt id pariatur Duis laboris amet exercitation veniam labore consectetur ea id quis eiusmod.</p>
+   				<p class="lead"><?=$lang->get("ABOUT_P_LEAD") ?></p>
    			</div>   			
 
    		</div>   		
@@ -161,29 +158,29 @@
 
    		<div class="col-six tab-full">
 
-   			<h3>Profile</h3>
-   			<p>Lorem ipsum Qui veniam ut consequat ex ullamco nulla in non ut esse in magna sint minim officia consectetur nisi commodo ea magna pariatur nisi cillum.</p>
+   			<h3><?=$lang->get("ABOUT_ROW_ABOUT-CONTENT_H3") ?></h3>
+   			<p><?=$lang->get("ABOUT_ROW_ABOUT-CONTENT_P") ?></p>
 
    			<ul class="info-list">
    				<li>
-   					<strong>ФИО:</strong>
-   					<span>Остаточников Павел Владимирович</span>
+   					<strong><?=$lang->get("ABOUT_LI_FIO_LABEL") ?></strong>
+   					<span><?=$lang->get("ABOUT_LI_FIO_VALUE") ?></span>
    				</li>
    				<li>
-   					<strong>Дата рождения:</strong>
-   					<span>23 февраля 1985</span>
+   					<strong><?=$lang->get("ABOUT_LI_BIRTH_DATE_LABEL") ?></strong>
+   					<span><?=$lang->get("ABOUT_LI_BIRTH_DATE_VALUE") ?></span>
    				</li>
    				<li>
-   					<strong>Работа:</strong>
-   					<span>Freelancer, Frontend Developer</span>
+   					<strong><?=$lang->get("ABOUT_LI_WORK_LABEL") ?></strong>
+   					<span><?=$lang->get("ABOUT_LI_WORK_VALUE") ?></span>
    				</li>
    				<li>
-   					<strong>Website:</strong>
-   					<span>www.kardswebsite.com</span>
+   					<strong><?=$lang->get("ABOUT_LI_SITE_LABEL") ?></strong>
+   					<span><?=$lang->get("ABOUT_LI_SITE_VALUE") ?></span>
    				</li>
    				<li>
-   					<strong>Email:</strong>
-   					<span>me@kardswebsite.com</span>
+   					<strong><?=$lang->get("ABOUT_LI_EMAIL_LABEL") ?></strong>
+   					<span><?=$lang->get("ABOUT_LI_EMAIL_VALUE") ?></span>
    				</li>
 
    			</ul> <!-- /info-list -->
@@ -192,30 +189,25 @@
 
    		<div class="col-six tab-full">
 
-   			<h3>Skills</h3>
-   			<p>Lorem ipsum Qui veniam ut consequat ex ullamco nulla in non ut esse in magna sint minim officia consectetur nisi commodo ea magna pariatur nisi cillum.</p>
+   			<h3><?=$lang->get("ABOUT_SKILLS_H3") ?></h3>
+   			<p><?=$lang->get("ABOUT_SKILLS_P") ?></p>
 
 				<ul class="skill-bars">
 				   <li>
-				   	<div class="progress percent90"><span>90%</span></div>
+				   	<div class="progress percent65"><span>65%</span></div>
 				   	<strong>HTML5</strong>
 				   </li>
 				   <li>
-				   	<div class="progress percent85"><span>85%</span></div>
+				   	<div class="progress percent55"><span>55%</span></div>
 				   	<strong>CSS3</strong>
 				   </li>
 				   <li>
-				   	<div class="progress percent70"><span>70%</span></div>
-				   	<strong>JQuery</strong>
+				   	<div class="progress percent55"><span>55%</span></div>
+				   	<strong>JavaScript</strong>
 				   </li>
 				   <li>
-				   	<div class="progress percent95"><span>95%</span></div>
-				   	<strong>PHP</strong>
-				   </li>
-				   <li>
-
-				   	<div class="progress percent75"><span>75%</span></div>
-				   	<strong>Wordpress</strong>
+				   	<div class="progress percent60"><span>60%</span></div>
+				   	<strong>React</strong>
 				   </li>
       
 				</ul> <!-- /skill-bars -->		
@@ -226,8 +218,8 @@
 
    	<div class="row button-section">
    		<div class="col-twelve">
-   			<a href="#contact" title="Hire Me" class="button stroke smoothscroll">Hire Me</a>
-   			<a href="#" title="Download CV" class="button button-primary">Download CV</a>
+   			<a href="#contact" title="Hire Me" class="button stroke smoothscroll"><?=$lang->get("ABOUT_BUTTON-SECTION_HIRE_ME") ?></a>
+   			<a href="#" title="Download CV" class="button button-primary"><?=$lang->get("ABOUT_BUTTON-SECTION_DOWNLOAD_CV") ?></a>
    		</div>   		
    	</div>
 
@@ -241,10 +233,10 @@
 		<div class="row section-intro">
    		<div class="col-twelve">
 
-   			<h5>Resume</h5>
-   			<h1>More of my credentials.</h1>
+   			<h5><?=$lang->get("RESUME_H5") ?></h5>
+   			<h1><?=$lang->get("RESUME_H1") ?></h1>
 
-   			<p class="lead">Lorem ipsum Do commodo in proident enim in dolor cupidatat adipisicing dolore officia nisi aliqua incididunt Ut veniam lorem ipsum Consectetur ut in in eu do.</p>
+   			<p class="lead"><?=$lang->get("RESUME_P_LEAD") ?></p>
 
    		</div>   		
    	</div> <!-- /section-intro--> 
@@ -253,7 +245,7 @@
 
    		<div class="col-twelve resume-header">
 
-   			<h2>Work Experience</h2>
+   			<h2><?=$lang->get("RESUME_WORK-EXPERIENCE_H2") ?></h2>
 
    		</div> <!-- /resume-header -->
 
@@ -264,17 +256,17 @@
    				<div class="timeline-block">
 
 	   				<div class="timeline-ico">
-	   					<i class="fa fa-graduation-cap"></i>
+	   					<i class="fa fa-briefcase"></i>
 	   				</div>
 
 	   				<div class="timeline-header">
-	   					<h3>UI Designer</h3>
-	   					<p>July 2015 - Present</p>
+	   					<h3><?=$lang->get("RESUME_WORK-EXPERIENCE_1_POSITION") ?></h3>
+	   					<p><?=$lang->get("RESUME_WORK-EXPERIENCE_1_PERIOD") ?></p>
 	   				</div>
 
 	   				<div class="timeline-content">
-	   					<h4>Awesome Studio</h4>
-	   					<p>Lorem ipsum Occaecat do esse ex et dolor culpa nisi ex in magna consectetur nisi cupidatat laboris esse eiusmod deserunt aute do quis velit esse sed Ut proident cupidatat nulla esse cillum laborum occaecat nostrud sit dolor incididunt amet est occaecat nisi.</p>
+	   					<h4><?=$lang->get("RESUME_WORK-EXPERIENCE_1_PLACE") ?></h4>
+	   					<p><?=$lang->get("RESUME_WORK-EXPERIENCE_1_DESCR") ?></p>
 	   				</div>
 
 	   			</div> <!-- /timeline-block -->
@@ -282,17 +274,17 @@
 	   			<div class="timeline-block">
 
 	   				<div class="timeline-ico">
-	   					<i class="fa fa-graduation-cap"></i>
+	   					<i class="fa fa-briefcase"></i>
 	   				</div>
 
 	   				<div class="timeline-header">
-	   					<h3>Front-end Developer</h3>
-	   					<p>July 2014 - June 2015</p>
+	   					<h3><?=$lang->get("RESUME_WORK-EXPERIENCE_2_POSITION") ?></h3>
+	   					<p><?=$lang->get("RESUME_WORK-EXPERIENCE_2_PERIOD") ?></p>
 	   				</div>
 
 	   				<div class="timeline-content">
-	   					<h4>Super Cool Agency</h4>
-	   					<p>Lorem ipsum Occaecat do esse ex et dolor culpa nisi ex in magna consectetur nisi cupidatat laboris esse eiusmod deserunt aute do quis velit esse sed Ut proident cupidatat nulla esse cillum laborum occaecat nostrud sit dolor incididunt amet est occaecat nisi incididunt.</p>
+	   					<h4><?=$lang->get("RESUME_WORK-EXPERIENCE_2_PLACE") ?></h4>
+	   					<p><?=$lang->get("RESUME_WORK-EXPERIENCE_2_DESCR") ?></p>
 	   				</div>
 
 	   			</div> <!-- /timeline-block -->
@@ -300,17 +292,17 @@
 	   			<div class="timeline-block">
 
 	   				<div class="timeline-ico">
-	   					<i class="fa fa-graduation-cap"></i>
+	   					<i class="fa fa-briefcase"></i>
 	   				</div>
 
 	   				<div class="timeline-header">
-	   					<h3>Web Designer</h3>
-	   					<p>May 2013 - June 2014</p>
+	   					<h3><?=$lang->get("RESUME_WORK-EXPERIENCE_3_POSITION") ?></h3>
+	   					<p><?=$lang->get("RESUME_WORK-EXPERIENCE_3_PERIOD") ?></p>
 	   				</div>
 
 	   				<div class="timeline-content">
-	   					<h4>Great Designs Studio</h4>
-	   					<p>Lorem ipsum Occaecat do esse ex et dolor culpa nisi ex in magna consectetur nisi cupidatat laboris esse eiusmod deserunt aute do quis velit esse sed Ut proident cupidatat nulla esse cillum laborum occaecat nostrud sit dolor incididunt amet est occaecat nisi incididunt.</p>
+	   					<h4><?=$lang->get("RESUME_WORK-EXPERIENCE_3_PLACE") ?></h4>
+	   					<p><?=$lang->get("RESUME_WORK-EXPERIENCE_3_DESCR") ?></p>
 	   				</div>
 
 	   			</div> <!-- /timeline-block -->
@@ -325,7 +317,7 @@
 
    		<div class="col-twelve resume-header">
 
-   			<h2>Education</h2>
+   			<h2><?=$lang->get("RESUME_EDUCATION_H2") ?></h2>
 
    		</div> <!-- /resume-header -->
 
@@ -336,17 +328,17 @@
    				<div class="timeline-block">
 
 	   				<div class="timeline-ico">
-	   					<i class="fa fa-briefcase"></i>
+	   					<i class="fa fa-graduation-cap"></i>
 	   				</div>
 
 	   				<div class="timeline-header">
-	   					<h3>Master Degree</h3>
-	   					<p>July 2015 - Present</p>
+	   					<h3><?=$lang->get("RESUME_EDUCATION_1_SPECIALITY") ?></h3>
+	   					<p><?=$lang->get("RESUME_EDUCATION_1_PERIOD") ?></p>
 	   				</div>
 
 	   				<div class="timeline-content">
-	   					<h4>University of Life</h4>
-	   					<p>Lorem ipsum Occaecat do esse ex et dolor culpa nisi ex in magna consectetur nisi cupidatat laboris esse eiusmod deserunt aute do quis velit esse sed Ut proident cupidatat nulla esse cillum laborum occaecat nostrud sit dolor incididunt amet est occaecat nisi.</p>
+	   					<h4><?=$lang->get("RESUME_EDUCATION_1_PLACE") ?></h4>
+	   					<p><?=$lang->get("RESUME_EDUCATION_1_DESCR") ?></p>
 	   				</div>
 
 	   			</div> <!-- /timeline-block -->
@@ -354,17 +346,17 @@
 	   			<div class="timeline-block">
 
 	   				<div class="timeline-ico">
-	   					<i class="fa fa-briefcase"></i>
+	   					<i class="fa fa-graduation-cap"></i>
 	   				</div>
 
 	   				<div class="timeline-header">
-	   					<h3>Bachelor Degree</h3>
-	   					<p>July 2014 - June 2015</p>
+	   					<h3><?=$lang->get("RESUME_EDUCATION_2_SPECIALITY") ?></h3>
+	   					<p><?=$lang->get("RESUME_EDUCATION_2_PERIOD") ?></p>
 	   				</div>
 
 	   				<div class="timeline-content">
-	   					<h4>State Design University</h4>
-	   					<p>Lorem ipsum Occaecat do esse ex et dolor culpa nisi ex in magna consectetur nisi cupidatat laboris esse eiusmod deserunt aute do quis velit esse sed Ut proident cupidatat nulla esse cillum laborum occaecat nostrud sit dolor incididunt amet est occaecat nisi incididunt.</p>
+	   					<h4><?=$lang->get("RESUME_EDUCATION_2_PLACE") ?></h4>
+	   					<p><?=$lang->get("RESUME_EDUCATION_2_DESCR") ?></p>
 	   				</div>
 
 	   			</div> <!-- /timeline-block -->
@@ -372,17 +364,17 @@
 	   			<div class="timeline-block">
 
 	   				<div class="timeline-ico">
-	   					<i class="fa fa-briefcase"></i>
+	   					<i class="fa fa-graduation-cap"></i>
 	   				</div>
 
 	   				<div class="timeline-header">
-	   					<h3>Bachelor Degree</h3>
-	   					<p>May 2013 - June 2014</p>
+	   					<h3><?=$lang->get("RESUME_EDUCATION_3_SPECIALITY") ?></h3>
+	   					<p><?=$lang->get("RESUME_EDUCATION_3_PERIOD") ?></p>
 	   				</div>
 
 	   				<div class="timeline-content">
-	   					<h4>Design College</h4>
-	   					<p>Lorem ipsum Occaecat do esse ex et dolor culpa nisi ex in magna consectetur nisi cupidatat laboris esse eiusmod deserunt aute do quis velit esse sed Ut proident cupidatat nulla esse cillum laborum occaecat nostrud sit dolor incididunt amet est occaecat nisi incididunt.</p>
+	   					<h4><?=$lang->get("RESUME_EDUCATION_3_PLACE") ?></h4>
+	   					<p><?=$lang->get("RESUME_EDUCATION_3_DESCR") ?></p>
 	   				</div>
 
 	   			</div> <!-- /timeline-block -->
@@ -403,10 +395,10 @@
 		<div class="row section-intro">
    		<div class="col-twelve">
 
-   			<h5>Портфолио</h5>
-   			<h1>Здесь представлены мои работы.</h1>
+   			<h5><?=$lang->get("PORTFOLIO_H5") ?></h5>
+   			<h1><?=$lang->get("PORTFOLIO_H1") ?></h1>
 
-   			<p class="lead">Lorem ipsum Do commodo in proident enim in dolor cupidatat adipisicing dolore officia nisi aliqua incididunt Ut veniam lorem ipsum Consectetur ut in in eu do.</p>
+   			<p class="lead"><?=$lang->get("PORTFOLIO_P") ?></p>
 
    		</div>   		
    	</div> <!-- /section-intro--> 
@@ -419,48 +411,48 @@
 	         <div id="folio-wrapper" class="block-1-2 block-mob-full stack">
 
 	         	<div class="bgrid folio-item">
-	               <div class="item-wrap">
-	               	<img src="images/portfolio/liberty.jpg" alt="Liberty">
-	                  <a href="#modal-01" class="overlay">	                  	           
-	                     <div class="folio-item-table">
-	                     	<div class="folio-item-cell">
-		     					       <h3 class="folio-title">Liberty</h3>	     					    
-		     					    	 <span class="folio-types">
-		     					       	  Graphic Design
-		     					       </span>
-		     					   </div>	                      	
-	                     </div>                    
-	                  </a>
-	               </div>	               
-	        		</div> <!-- /folio-item -->
+					<div class="item-wrap">
+	               		<img src="images/portfolio/1_todo_list.jpg" alt="Todo List">
+						<a href="#modal-01" class="overlay">	                  	           
+							<div class="folio-item-table">
+								<div class="folio-item-cell">
+									<h3 class="folio-title"><?=$lang->get("PORTFOLIO_1_TITLE") ?></h3>	     					    
+									<span class="folio-types">
+										<?=$lang->get("PORTFOLIO_1_TYPE") ?>
+									</span>
+								</div>	                      	
+							</div>                    
+						</a>
+					</div>	               
+				</div> <!-- /folio-item -->
 
-	        		<div class="bgrid folio-item">
-	               <div class="item-wrap">
-	               	<img src="images/portfolio/shutterbug.jpg" alt="Shutterbug">
-	               	<a href="#modal-02" class="overlay">              		                  
-	                     <div class="folio-item-table">
-	                     	<div class="folio-item-cell">
-	                     		<h3 class="folio-title">Shutterbug</h3>	     					    
-		     					    	<span class="folio-types">
-		     					       	  Web Design
-		     					      </span>		     		
-		     					   </div> 	                      	
-	                     </div>                    
-	                  </a>
-	               </div>
-	        		</div> <!-- /folio-item -->
+				<div class="bgrid folio-item">
+					<div class="item-wrap">
+						<img src="images/portfolio/2_StarDB.jpg" alt="StarDB screenshot">
+						<a href="#modal-02" class="overlay">              		                  
+	                     	<div class="folio-item-table">
+	                     		<div class="folio-item-cell">
+								 	<h3 class="folio-title"><?=$lang->get("PORTFOLIO_2_TITLE") ?></h3>	     					    
+									<span class="folio-types">
+										<?=$lang->get("PORTFOLIO_2_TYPE") ?>
+									</span>     		
+								</div> 	                      	
+	                     	</div>                    
+	                  	</a>
+	               	</div>
+				</div> <!-- /folio-item -->
 
 	            <div class="bgrid folio-item">
 	               <div class="item-wrap">
-	               	<img src="images/portfolio/clouds.jpg"alt="Clouds">
+	               	<img src="images/portfolio/3_pulsometr.jpg"alt="Pulsometr">
 	                  <a href="#modal-03" class="overlay">             		                  
 	                     <div class="folio-item-table">
 	                     	<div class="folio-item-cell">
-	                     		<h3 class="folio-title">Clouds</h3>	     					    
-		     					    	<span class="folio-types">
-		     					       	  Web Design
-		     					      </span>		     		
-		     					   </div> 	                      	
+							 	<h3 class="folio-title"><?=$lang->get("PORTFOLIO_3_TITLE") ?></h3>	     					    
+								<span class="folio-types">
+									<?=$lang->get("PORTFOLIO_3_TYPE") ?>
+								</span>		     		
+							</div> 	                      	
 	                     </div>                    
 	                  </a>
 	               </div>
@@ -468,174 +460,109 @@
 
 	            <div class="bgrid folio-item">
 	               <div class="item-wrap">
-	               	<img src="images/portfolio/beetle.jpg" alt="Beetle">
+	               	<img src="images/portfolio/4_uber.jpg" alt="Uber">
 	                  <a href="#modal-04" class="overlay">                  	                 
 	                     <div class="folio-item-table">
 	                     	<div class="folio-item-cell">
-	                     		<h3 class="folio-title">Beetle</h3>	     					    
-		     					    	<span class="folio-types">
-		     					       	  Branding
-		     					      </span>		     		
-		     					   </div>  	                      	
-	                     </div>                    
+							 	<h3 class="folio-title"><?=$lang->get("PORTFOLIO_4_TITLE") ?></h3>	     					    
+								<span class="folio-types">
+									<?=$lang->get("PORTFOLIO_4_TYPE") ?>
+								</span>		     		
+							</div>  	                      	
+						</div>                    
 	                  </a>
 	               </div>
 	        		</div> <!-- /folio-item -->     
-
-	        		<div class="bgrid folio-item">
-	               <div class="item-wrap">
-	               	<img src="images/portfolio/lighthouse.jpg" alt="Lighthouse">
-	                  <a href="#modal-05" class="overlay">             		                  
-	                     <div class="folio-item-table">
-	                     	<div class="folio-item-cell">
-	                     		<h3 class="folio-title">Lighthouse</h3>	     					    
-		     					    	<span class="folio-types">
-		     					       	  Web Development
-		     					      </span>		     		
-		     					   </div> 	                      	
-	                     </div>                    
-	                  </a>
-	               </div>
-	        		</div> <!-- /folio-item -->
-
-	            <div class="bgrid folio-item">
-	               <div class="item-wrap">
-	               	<img src="images/portfolio/salad.jpg" alt="Salad">
-	                  <a href="#modal-06" class="overlay">
-	                     <div class="folio-item-table">
-	                     	<div class="folio-item-cell">
-	                     		<h3 class="folio-title">Salad</h3>	     					    
-		     					    	<span class="folio-types">
-		     					       	  Branding
-		     					      </span>		     		
-		     					   </div>	                      	
-	                     </div>                    
-	                  </a>
-	               </div>
-	        		</div> <!-- /folio-item -->   
 
 	            <!-- modal popups - begin
 	            ============================================================= -->
 	            <div id="modal-01" class="popup-modal slider mfp-hide">	
 
+					<div class="media">
+						<img src="images/portfolio/modals/m-1_todo_list.jpg" alt="" />
+					</div>      	
+
+					<div class="description-box">
+						<h4><?=$lang->get("PORTFOLIO_MODALS_1_H4") ?></h4>		      
+						<p><?=$lang->get("PORTFOLIO_MODALS_1_P") ?></p>
+						<p>
+							<a href="https://github.com/Paul7967/todo" target="_blank"><u><?=$lang->get("PORTFOLIO_MODALS_A_GITHUB") ?></u></a>
+						</p>
+						<div class="categories"><?=$lang->get("PORTFOLIO_MODALS_1_CATEGORY") ?></div>			               
+					</div>
+
+					<div class="link-box">
+						<a href="http://www.todolist.pavelostatochnikov.ru"><?=$lang->get("PORTFOLIO_MODALS_BTN_DETAILS") ?></a>
+						<a href="#" class="popup-modal-dismiss"><?=$lang->get("PORTFOLIO_MODALS_BTN_CLOSE") ?></a>
+					</div>		      
+
+				</div> <!-- /modal-01 -->
+
+					<div id="modal-02" class="popup-modal slider mfp-hide">	
+
 				     	<div class="media">
-				     		<img src="images/portfolio/modals/m-liberty.jpg" alt="" />
+				     		<img src="images/portfolio/modals/m-2_StarDB.jpg" alt="" />
 				     	</div>      	
 
 					   <div class="description-box">
-					      <h4>Liberty</h4>		      
-					      <p>Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit.</p>
+					  	<h4><?=$lang->get("PORTFOLIO_MODALS_2_H4") ?></h4>		      
+						<p><?=$lang->get("PORTFOLIO_MODALS_2_P") ?></p>
+						<p>
+							<a href="https://github.com/Paul7967/star-db" target="_blank"><u><?=$lang->get("PORTFOLIO_MODALS_A_GITHUB") ?></u></a>
+						</p>
+						<div class="categories"><?=$lang->get("PORTFOLIO_MODALS_2_CATEGORY") ?></div>			               
+						</div>
 
-					      <div class="categories">Web Development</div>			               
-					   </div>
-
-			         <div class="link-box">
-			            <a href="http://www.behance.net">Details</a>
-					      <a href="#" class="popup-modal-dismiss">Close</a>
-			         </div>		      
-
-				   </div> <!-- /modal-01 -->
-
-				   <div id="modal-02" class="popup-modal slider mfp-hide">	
-
-				     	<div class="media">
-				     		<img src="images/portfolio/modals/m-shutterbug.jpg" alt="" />
-				     	</div>      	
-
-					   <div class="description-box">
-					      <h4>Shutterbug</h4>		      
-					      <p>Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit.</p>
-
-					      <div class="categories">Web Design</div>			               
-					   </div>
-
-			         <div class="link-box">
-			            <a href="http://www.behance.net">Details</a>
-					      <a href="#" class="popup-modal-dismiss">Close</a>
-			         </div>		      
+					<div class="link-box">
+						<a href="http://www.stardb.pavelostatochnikov.ru"><?=$lang->get("PORTFOLIO_MODALS_BTN_DETAILS") ?></a>
+						<a href="#" class="popup-modal-dismiss"><?=$lang->get("PORTFOLIO_MODALS_BTN_CLOSE") ?></a>
+					</div>	      
 
 				   </div> <!-- /modal-02 -->
 
 				   <div id="modal-03" class="popup-modal slider mfp-hide">	
 
 				     	<div class="media">
-				     		<img src="images/portfolio/modals/m-clouds.jpg" alt="" />
+				     		<img src="images/portfolio/modals/m-3_pulsometr.jpg" alt="" />
 				     	</div>      	
 
-					   <div class="description-box">
-					      <h4>Clouds</h4>		      
-					      <p>Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit.</p>
-
-					      <div class="categories">Web Design</div>			               
+					   	<div class="description-box">
+					   		<h4><?=$lang->get("PORTFOLIO_MODALS_3_H4") ?></h4>		      
+							<p><?=$lang->get("PORTFOLIO_MODALS_3_P") ?></p>
+							<p>
+								<a href="https://github.com/Paul7967/pulsometr" target="_blank"><u><?=$lang->get("PORTFOLIO_MODALS_A_GITHUB") ?></u></a>
+							</p>
+					      	<div class="categories"><?=$lang->get("PORTFOLIO_MODALS_3_CATEGORY") ?></div>			               
 					   </div>
 
-			         <div class="link-box">
-			            <a href="http://www.behance.net">Details</a>
-					      <a href="#" class="popup-modal-dismiss">Close</a>
-			         </div>		      
+			         	<div class="link-box">
+			            	<a href="http://www.stardb.pavelostatochnikov.ru"><?=$lang->get("PORTFOLIO_MODALS_BTN_DETAILS") ?></a>
+							<a href="#" class="popup-modal-dismiss"><?=$lang->get("PORTFOLIO_MODALS_BTN_CLOSE") ?></a>
+			         	</div>		      
 
 				   </div> <!-- /modal-03 -->
 
 				   <div id="modal-04" class="popup-modal slider mfp-hide">	
 
 				     	<div class="media">
-				     		<img src="images/portfolio/modals/m-beetle.jpg" alt="" />
+				     		<img src="images/portfolio/modals/m-4_uber.jpg" alt="" />
 				     	</div>      	
 
-					   <div class="description-box">
-					      <h4>Beetle</h4>		      
-					      <p>Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit.</p>
+					   	<div class="description-box">
+					   		<h4><?=$lang->get("PORTFOLIO_MODALS_4_H4") ?></h4>		      
+							<p><?=$lang->get("PORTFOLIO_MODALS_4_P") ?></p>
+							<p>
+								<a href="https://github.com/Paul7967/uber" target="_blank"><u><?=$lang->get("PORTFOLIO_MODALS_A_GITHUB") ?></u></a>
+							</p>
+					      	<div class="categories"><?=$lang->get("PORTFOLIO_MODALS_4_CATEGORY") ?></div>			               
+					   	</div>
 
-					      <div class="categories">Branding</div>			               
-					   </div>
-
-			         <div class="link-box">
-			            <a href="http://www.behance.net">Details</a>
-					      <a href="#" class="popup-modal-dismiss">Close</a>
-			         </div>		      
+			         	<div class="link-box">
+					      	<a href="http://www.stardb.pavelostatochnikov.ru"><?=$lang->get("PORTFOLIO_MODALS_BTN_DETAILS") ?></a>
+							<a href="#" class="popup-modal-dismiss"><?=$lang->get("PORTFOLIO_MODALS_BTN_CLOSE") ?></a>
+			         	</div>		      
 
 				   </div> <!-- /modal-04 -->
-
-				   <div id="modal-05" class="popup-modal slider mfp-hide">	
-
-				     	<div class="media">
-				     		<img src="images/portfolio/modals/m-lighthouse.jpg" alt="" />
-				     	</div>      	
-
-					   <div class="description-box">
-					      <h4>Lighthouse</h4>		      
-					      <p>Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit.</p>
-
-					      <div class="categories">Web Development</div>			               
-					   </div>
-
-			         <div class="link-box">
-			            <a href="http://www.behance.net">Details</a>
-					      <a href="#" class="popup-modal-dismiss">Close</a>
-			         </div>		      
-
-				   </div> <!-- /modal-05 -->
-
-				   <div id="modal-06" class="popup-modal slider mfp-hide">	
-
-				     	<div class="media">
-				     		<img src="images/portfolio/modals/m-salad.jpg" alt="" />
-				     	</div>      	
-
-					   <div class="description-box">
-					      <h4>Salad</h4>		      
-					      <p>Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit.</p>
-
-					      <div class="categories">Branding</div>			               
-					   </div>
-
-			         <div class="link-box">
-			            <a href="http://www.behance.net">Details</a>
-					      <a href="#" class="popup-modal-dismiss">Close</a>
-			         </div>		      
-
-				   </div> <!-- /modal-06 -->
-
 
 				   <!-- modal popups - end
 	            ============================================================= -->
@@ -651,118 +578,119 @@
 
 	<!-- services Section
    ================================================== -->
-	<section id="services">
+	<section id="services" style="display: none"> 
+		 <!-- отключил этот фрагмент через display: none -->
 
 		<div class="overlay"></div>
 
 		<div class="row section-intro">
-   		<div class="col-twelve">
+			<div class="col-twelve">
 
-   			<h5>Услуги</h5>
-   			<h1>Чем я могу быть вам полезен?</h1>
+				<h5>Услуги</h5>
+				<h1>Чем я могу быть вам полезен?</h1>
 
-   			<p class="lead">Lorem ipsum Do commodo in proident enim in dolor cupidatat adipisicing dolore officia nisi aliqua incididunt Ut veniam lorem ipsum Consectetur ut in in eu do.</p>
+				<p class="lead">Lorem ipsum Do commodo in proident enim in dolor cupidatat adipisicing dolore officia nisi aliqua incididunt Ut veniam lorem ipsum Consectetur ut in in eu do.</p>
 
-   		</div>   		
-   	</div> <!-- /section-intro -->
+			</div>   		
+		</div> <!-- /section-intro -->
 
-   	<div class="row services-content">
+		<div class="row services-content">
 
-   		<div id="owl-slider" class="owl-carousel services-list">
-
-	      	<div class="service">	
-
-	      		<span class="icon"><i class="icon-earth"></i></span>            
-
-	            <div class="service-content">	
-
-	            	 <h3>Webdesign</h3>
-
-		            <p class="desc">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit.
-	         		</p>
-	         		
-	         	</div> 	         	 
-
-				</div> <!-- /service -->
+			<div id="owl-slider" class="owl-carousel services-list">
 
 				<div class="service">	
 
-					<span class="icon"><i class="icon-window"></i></span>                          
+					<span class="icon"><i class="icon-earth"></i></span>            
 
-	            <div class="service-content">	
+					<div class="service-content">	
 
-	            	<h3>Web Development</h3>  
+						<h3>Webdesign</h3>
 
-		            <p class="desc">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit.
-	         		</p>
+						<p class="desc">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit.
+						</p>
+						
+					</div> 	         	 
 
-	            </div>	                          
+					</div> <!-- /service -->
 
-			   </div> <!-- /service -->
+					<div class="service">	
 
-			   <div class="service">
+						<span class="icon"><i class="icon-window"></i></span>                          
 
-			   	<span class="icon"><i class="icon-paint-brush"></i></span>		            
+					<div class="service-content">	
 
-	            <div class="service-content">
+						<h3>Web Development</h3>  
 
-	            	<h3>Branding</h3>
+						<p class="desc">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit.
+						</p>
 
-		            <p class="desc">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit.
-	        			</p> 
-
-	            </div> 	            	               
-
-			   </div> <!-- /service -->
-
-				<div class="service">
-
-					<span class="icon"><i class="icon-toggles"></i></span>	              
-
-	            <div class="service-content">
-
-	            	<h3>UI/UX Design</h3>
-
-		            <p class="desc">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit.
-	         		</p> 
-	         		
-	            </div>                
+					</div>	                          
 
 				</div> <!-- /service -->
 
-			   <div class="service">
+				<div class="service">
 
-			   	<span class="icon"><i class="icon-image"></i></span>	            
+					<span class="icon"><i class="icon-paint-brush"></i></span>		            
 
-	            <div class="service-content">
+					<div class="service-content">
 
-	            	<h3>Graphics Design</h3>
+						<h3>Branding</h3>
 
-		            <p class="desc">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit.
-	        			</p> 
+						<p class="desc">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit.
+							</p> 
 
-	            </div>	               
+					</div> 	            	               
 
-			   </div> <!-- /service -->
+				</div> <!-- /service -->
 
-			   <div class="service">
+					<div class="service">
 
-			   	<span class="icon"><i class="icon-chat"></i></span>	   	           
+						<span class="icon"><i class="icon-toggles"></i></span>	              
 
-	            <div class="service-content">
+					<div class="service-content">
 
-	            	 <h3>Consultancy</h3>
+						<h3>UI/UX Design</h3>
 
-		            <p class="desc">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit.
-	        			</p> 
-	        			
-	            </div>	               
+						<p class="desc">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit.
+						</p> 
+						
+					</div>                
 
-			   </div> <!-- /service -->
+					</div> <!-- /service -->
 
-	      </div> <!-- /services-list -->
-   		
-   	</div> <!-- /services-content -->
+				<div class="service">
+
+					<span class="icon"><i class="icon-image"></i></span>	            
+
+					<div class="service-content">
+
+						<h3>Graphics Design</h3>
+
+						<p class="desc">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit.
+							</p> 
+
+					</div>	               
+
+				</div> <!-- /service -->
+
+				<div class="service">
+
+					<span class="icon"><i class="icon-chat"></i></span>	   	           
+
+					<div class="service-content">
+
+						<h3>Consultancy</h3>
+
+						<p class="desc">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit.
+							</p> 
+							
+					</div>	               
+
+				</div> <!-- /service -->
+
+			</div> <!-- /services-list -->
+			
+		</div> <!-- /services-content -->
 		
 	</section> <!-- /services -->	
 
@@ -783,11 +711,11 @@
 						</div>
 
 						<h3 class="stat-count">
-							1500
+							8
 						</h3>
 
 						<h5 class="stat-title">
-							Projects Completed
+							<?=$lang->get("STATS_H5_PROJECTS") ?>
 						</h5>
 
 					</div> <!-- /stat -->					
@@ -799,11 +727,11 @@
 						</div>
 
 						<h3 class="stat-count">
-							900
+							3
 						</h3>
 
 						<h5 class="stat-title">
-							Happy Clients
+							<?=$lang->get("STATS_H6_CLIENTS") ?>
 						</h5>
 
 					</div> <!-- /stat -->
@@ -815,11 +743,11 @@
 						</div>
 
 						<h3 class="stat-count">
-							200
+							10
 						</h3>
 
 						<h5 class="stat-title">
-							Awards Received
+							<?=$lang->get("STATS_H7_AWARDS") ?>
 						</h5>
 
 					</div> <!-- /stat -->									
@@ -831,11 +759,11 @@
 						</div>
 
 						<h3 class="stat-count">
-							120
+							1000
 						</h3>
 
 						<h5 class="stat-title">
-							Crazy Ideas
+							<?=$lang->get("STATS_H8_IDEAS") ?>
 						</h5>
 
 					</div> <!-- /stat -->
@@ -847,11 +775,11 @@
 						</div>
 
 						<h3 class="stat-count">
-							1500
+							1300
 						</h3>
 
 						<h5 class="stat-title">
-							Coffee Cups
+							<?=$lang->get("STATS_H9_COFFEE_CUPS") ?>
 						</h5>
 
 					</div> <!-- /stat -->
@@ -863,11 +791,11 @@
 						</div>
 
 						<h3 class="stat-count">
-							7200
+							11000
 						</h3>
 
 						<h5 class="stat-title">
-							Hours
+							<?=$lang->get("STATS_H10_HOURS") ?>
 						</h5>
 
 					</div> <!-- /stat -->
@@ -885,111 +813,111 @@
 	<section id="contact">
 
 		<div class="row section-intro">
-   		<div class="col-twelve">
+			<div class="col-twelve">
 
-   			<h5>Контакты</h5>
-   			<h1>I'd Love To Hear From You.</h1>
+				<h5>Контакты</h5>
+				<h1>I'd Love To Hear From You.</h1>
 
-   			<p class="lead">Lorem ipsum Do commodo in proident enim in dolor cupidatat adipisicing dolore officia nisi aliqua incididunt Ut veniam lorem ipsum Consectetur ut in in eu do.</p>
+				<p class="lead">Lorem ipsum Do commodo in proident enim in dolor cupidatat adipisicing dolore officia nisi aliqua incididunt Ut veniam lorem ipsum Consectetur ut in in eu do.</p>
 
-   		</div> 
-   	</div> <!-- /section-intro -->
+			</div> 
+		</div> <!-- /section-intro -->
 
-   	<div class="row contact-form">
+		<div class="row contact-form">
 
-   		<div class="col-twelve">
+			<div class="col-twelve">
 
-            <!-- form -->
-            <form name="contactForm" id="contactForm" method="post" action="">
-      			<fieldset>
+				<!-- form -->
+				<form name="contactForm" id="contactForm" method="post" action="">
+					<fieldset>
 
-                  <div class="form-field">
- 						   <input name="contactName" type="text" id="contactName" placeholder="Name" value="" minlength="2" required="">
-                  </div>
-                  <div class="form-field">
-	      			   <input name="contactEmail" type="email" id="contactEmail" placeholder="Email" value="" required="">
-	               </div>
-                  <div class="form-field">
-	     				   <input name="contactSubject" type="text" id="contactSubject" placeholder="Subject" value="">
-	               </div>                       
-                  <div class="form-field">
-	                 	<textarea name="contactMessage" id="contactMessage" placeholder="message" rows="10" cols="50" required=""></textarea>
-	               </div>                      
-                 <div class="form-field">
-                     <button class="submitform">Submit</button>
-                     <div id="submit-loader">
-                        <div class="text-loader">Sending...</div>                             
-       				      <div class="s-loader">
-								  	<div class="bounce1"></div>
-								  	<div class="bounce2"></div>
-								  	<div class="bounce3"></div>
+					<div class="form-field">
+							<input name="contactName" type="text" id="contactName" placeholder="Name" value="" minlength="2" required="">
+					</div>
+					<div class="form-field">
+						<input name="contactEmail" type="email" id="contactEmail" placeholder="Email" value="" required="">
+					</div>
+					<div class="form-field">
+							<input name="contactSubject" type="text" id="contactSubject" placeholder="Subject" value="">
+					</div>                       
+					<div class="form-field">
+							<textarea name="contactMessage" id="contactMessage" placeholder="message" rows="10" cols="50" required=""></textarea>
+					</div>                      
+					<div class="form-field">
+						<button class="submitform">Submit</button>
+						<div id="submit-loader">
+							<div class="text-loader">Sending...</div>                             
+							<div class="s-loader">
+										<div class="bounce1"></div>
+										<div class="bounce2"></div>
+										<div class="bounce3"></div>
+									</div>
 								</div>
-							</div>
-                  </div>
+					</div>
 
-      			</fieldset>
-      		</form> <!-- Form End -->
+					</fieldset>
+				</form> <!-- Form End -->
 
-            <!-- contact-warning -->
-            <div id="message-warning">            	
-            </div>            
-            <!-- contact-success -->
-      		<div id="message-success">
-               <i class="fa fa-check"></i>Ваше сообщение было отправлено, благодарю вас!<br>
-      		</div>
+				<!-- contact-warning -->
+				<div id="message-warning">            	
+				</div>            
+				<!-- contact-success -->
+				<div id="message-success">
+				<i class="fa fa-check"></i>Ваше сообщение было отправлено, благодарю вас!<br>
+				</div>
 
-         </div> <!-- /col-twelve -->
-   		
-   	</div> <!-- /contact-form -->
+			</div> <!-- /col-twelve -->
+			
+		</div> <!-- /contact-form -->
 
-   	<div class="row contact-info">
+		<div class="row contact-info">
 
-   		<div class="col-four tab-full">
+			<div class="col-four tab-full">
 
-   			<div class="icon">
-   				<i class="icon-pin"></i>
-   			</div>
+				<div class="icon">
+					<i class="icon-pin"></i>
+				</div>
 
-   			<h5>Where to find me</h5>
+				<h5>Where to find me</h5>
 
-   			<p>
-            1600 Amphitheatre Parkway<br>
-            Mountain View, CA<br>
-            94043 US
-            </p>
+				<p>
+				1600 Amphitheatre Parkway<br>
+				Mountain View, CA<br>
+				94043 US
+				</p>
 
-   		</div>
+			</div>
 
-   		<div class="col-four tab-full collapse">
+			<div class="col-four tab-full collapse">
 
-   			<div class="icon">
-   				<i class="icon-mail"></i>
-   			</div>
+				<div class="icon">
+					<i class="icon-mail"></i>
+				</div>
 
-   			<h5>Email Me At</h5>
+				<h5>Email Me At</h5>
 
-   			<p>someone@kardswebsite.com<br>
-			   	info@kardswebsite.com			     
-			   </p>
+				<p>someone@kardswebsite.com<br>
+					info@kardswebsite.com			     
+				</p>
 
-   		</div>
+			</div>
 
-   		<div class="col-four tab-full">
+			<div class="col-four tab-full">
 
-   			<div class="icon">
-   				<i class="icon-phone"></i>
-   			</div>
+				<div class="icon">
+					<i class="icon-phone"></i>
+				</div>
 
-   			<h5>Call Me At</h5>
+				<h5>Call Me At</h5>
 
-   			<p>Phone: (+63) 555 1212<br>
-			   	Mobile: (+63) 555 0100<br>
-			     	Fax: (+63) 555 0101
-			   </p>
+				<p>Phone: (+63) 555 1212<br>
+					Mobile: (+63) 555 0100<br>
+						Fax: (+63) 555 0101
+				</p>
 
-   		</div>
-   		
-   	</div> <!-- /contact-info -->
+			</div>
+			
+		</div> <!-- /contact-info -->
 		
 	</section> <!-- /contact -->
 
