@@ -41,7 +41,7 @@
 
    <!--- basic page needs
    ================================================== -->
-   <meta charset="utf-8">
+   	<meta charset="utf-8">
 	<title><?=$lang->get("HEAD_META_TITLE") ?></title>
 	<meta name="description" content="">  
 	<meta name="author" content="">
@@ -125,11 +125,11 @@
    	</div> <!-- /intro-content --> 
 
    	<ul class="intro-social">        
-         <li><a href="https://www.linkedin.com/in/pavel-o/"><i class="fa fa-linkedin"></i></a></li>
-         <li><a href="https://www.facebook.com/profile.php?id=100014807746891"><i class="fa fa-facebook"></i></a></li>
-         <li><a href="https://vk.com/ostatochnikov85"><i class="fa fa-vk"></i></a></li>
-         <li><a href="https://www.instagram.com/info_producer_ostatochnikov/"><i class="fa fa-instagram"></i></a></li>
-      </ul> <!-- /intro-social -->      	
+		<li><a href="https://www.linkedin.com/in/pavel-o/"><i class="fa fa-linkedin"></i></a></li>
+		<li><a href="https://www.facebook.com/profile.php?id=100014807746891"><i class="fa fa-facebook"></i></a></li>
+		<li><a href="https://vk.com/ostatochnikov85"><i class="fa fa-vk"></i></a></li>
+		<li><a href="https://www.instagram.com/pavel_ostatochnikov/"><i class="fa fa-instagram"></i></a></li>
+	</ul> <!-- /intro-social -->      	
 
    </section> <!-- /intro -->
 
@@ -492,7 +492,7 @@
 					</div>
 
 					<div class="link-box">
-						<a href="http://www.todolist.pavelostatochnikov.ru"><?=$lang->get("PORTFOLIO_MODALS_BTN_DETAILS") ?></a>
+						<a href="http://www.todolist.pavelostatochnikov.ru" target="_blank"><?=$lang->get("PORTFOLIO_MODALS_BTN_DETAILS") ?></a>
 						<a href="#" class="popup-modal-dismiss"><?=$lang->get("PORTFOLIO_MODALS_BTN_CLOSE") ?></a>
 					</div>		      
 
@@ -514,7 +514,7 @@
 						</div>
 
 					<div class="link-box">
-						<a href="http://www.stardb.pavelostatochnikov.ru"><?=$lang->get("PORTFOLIO_MODALS_BTN_DETAILS") ?></a>
+						<a href="http://www.stardb.pavelostatochnikov.ru" target="_blank"><?=$lang->get("PORTFOLIO_MODALS_BTN_DETAILS") ?></a>
 						<a href="#" class="popup-modal-dismiss"><?=$lang->get("PORTFOLIO_MODALS_BTN_CLOSE") ?></a>
 					</div>	      
 
@@ -536,7 +536,7 @@
 					   </div>
 
 			         	<div class="link-box">
-			            	<a href="http://www.stardb.pavelostatochnikov.ru"><?=$lang->get("PORTFOLIO_MODALS_BTN_DETAILS") ?></a>
+			            	<a href="http://www.dd.pavelostatochnikov.ru" target="_blank"><?=$lang->get("PORTFOLIO_MODALS_BTN_DETAILS") ?></a>
 							<a href="#" class="popup-modal-dismiss"><?=$lang->get("PORTFOLIO_MODALS_BTN_CLOSE") ?></a>
 			         	</div>		      
 
@@ -558,7 +558,7 @@
 					   	</div>
 
 			         	<div class="link-box">
-					      	<a href="http://www.stardb.pavelostatochnikov.ru"><?=$lang->get("PORTFOLIO_MODALS_BTN_DETAILS") ?></a>
+					      	<a href="http://www.uber.pavelostatochnikov.ru" target="_blank"><?=$lang->get("PORTFOLIO_MODALS_BTN_DETAILS") ?></a>
 							<a href="#" class="popup-modal-dismiss"><?=$lang->get("PORTFOLIO_MODALS_BTN_CLOSE") ?></a>
 			         	</div>		      
 
@@ -815,15 +815,16 @@
 		<div class="row section-intro">
 			<div class="col-twelve">
 
-				<h5>Контакты</h5>
-				<h1>I'd Love To Hear From You.</h1>
+				<h5><?=$lang->get("CONTACT_H5") ?></h5>
+				<h1><?=$lang->get("CONTACT_H1") ?></h1>
 
-				<p class="lead">Lorem ipsum Do commodo in proident enim in dolor cupidatat adipisicing dolore officia nisi aliqua incididunt Ut veniam lorem ipsum Consectetur ut in in eu do.</p>
+				<p class="lead"><?=$lang->get("CONTACT_P") ?></p>
 
 			</div> 
 		</div> <!-- /section-intro -->
 
-		<div class="row contact-form">
+		<div class="row contact-form"style="display: none"> 
+		 <!-- отключил этот фрагмент через display: none -->
 
 			<div class="col-twelve">
 
@@ -832,21 +833,21 @@
 					<fieldset>
 
 					<div class="form-field">
-							<input name="contactName" type="text" id="contactName" placeholder="Name" value="" minlength="2" required="">
+							<input name="contactName" type="text" id="contactName" placeholder="<?=$lang->get("CONTACT_FORM_PLACEHOLDER_NAME") ?>" value="" minlength="2" required="">
 					</div>
 					<div class="form-field">
-						<input name="contactEmail" type="email" id="contactEmail" placeholder="Email" value="" required="">
+						<input name="contactEmail" type="email" id="contactEmail" placeholder="<?=$lang->get("CONTACT_FORM_PLACEHOLDER_EMAIL") ?>" value="" required="">
 					</div>
 					<div class="form-field">
-							<input name="contactSubject" type="text" id="contactSubject" placeholder="Subject" value="">
+							<input name="contactSubject" type="text" id="contactSubject" placeholder="<?=$lang->get("CONTACT_FORM_PLACEHOLDER_SUBJECT") ?>" value="">
 					</div>                       
 					<div class="form-field">
-							<textarea name="contactMessage" id="contactMessage" placeholder="message" rows="10" cols="50" required=""></textarea>
+							<textarea name="contactMessage" id="contactMessage" placeholder="<?=$lang->get("CONTACT_FORM_PLACEHOLDER_MESSAGE") ?>" rows="10" cols="50" required=""></textarea>
 					</div>                      
 					<div class="form-field">
-						<button class="submitform">Submit</button>
+						<button class="submitform"><?=$lang->get("CONTACT_FORM_BUTTON_SUBMIT") ?></button>
 						<div id="submit-loader">
-							<div class="text-loader">Sending...</div>                             
+							<div class="text-loader"><?=$lang->get("CONTACT_FORM_TEXT-LOADER") ?></div>                             
 							<div class="s-loader">
 										<div class="bounce1"></div>
 										<div class="bounce2"></div>
@@ -863,7 +864,7 @@
 				</div>            
 				<!-- contact-success -->
 				<div id="message-success">
-				<i class="fa fa-check"></i>Ваше сообщение было отправлено, благодарю вас!<br>
+					<i class="fa fa-check"></i><?=$lang->get("CONTACT_FORM_MESSAGE-SUCCESS") ?><br>
 				</div>
 
 			</div> <!-- /col-twelve -->
@@ -878,13 +879,9 @@
 					<i class="icon-pin"></i>
 				</div>
 
-				<h5>Where to find me</h5>
+				<h5><?=$lang->get("CONTACT_ADDRESS_H5") ?></h5>
 
-				<p>
-				1600 Amphitheatre Parkway<br>
-				Mountain View, CA<br>
-				94043 US
-				</p>
+				<p><?=$lang->get("CONTACT_ADDRESS_P") ?></p>
 
 			</div>
 
@@ -894,31 +891,26 @@
 					<i class="icon-mail"></i>
 				</div>
 
-				<h5>Email Me At</h5>
+				<h5><?=$lang->get("CONTACT_EMAIL_H5") ?></h5>
 
-				<p>someone@kardswebsite.com<br>
-					info@kardswebsite.com			     
-				</p>
+				<p><?=$lang->get("CONTACT_EMAIL_P") ?></p>
 
 			</div>
 
 			<div class="col-four tab-full">
 
 				<div class="icon">
-					<i class="icon-phone"></i>
+					<a href="https://wa.me/79058229729?text=Сообщение%с%сайта%pavelostatochnikov.ru" target="_blank"><i class="fa fa-whatsapp"></i></a>
 				</div>
 
-				<h5>Call Me At</h5>
+				<h5><?=$lang->get("CONTACT_WHATSAPP_H5") ?></h5>
 
-				<p>Phone: (+63) 555 1212<br>
-					Mobile: (+63) 555 0100<br>
-						Fax: (+63) 555 0101
-				</p>
+				<p><?=$lang->get("CONTACT_WHATSAPP_P") ?></p>
 
 			</div>
 			
 		</div> <!-- /contact-info -->
-		
+
 	</section> <!-- /contact -->
 
 
@@ -931,18 +923,17 @@
      		<div class="col-six tab-full pull-right social">
 
      			<ul class="footer-social">        
-			      <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-			      <li><a href="#"><i class="fa fa-behance"></i></a></li>
-			      <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-			      <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
-			      <li><a href="#"><i class="fa fa-instagram"></i></a></li>
-			   </ul> 
+					<li><a href="https://www.linkedin.com/in/pavel-o/" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+					<li><a href="https://www.facebook.com/profile.php?id=100014807746891" target="_blank"><i class="fa fa-facebook"></i></a></li>
+					<li><a href="https://vk.com/ostatochnikov85"><i class="fa fa-vk" target="_blank"></i></a></li>
+					<li><a href="https://www.instagram.com/pavel_ostatochnikov/" target="_blank"><i class="fa fa-instagram"></i></a></li>
+					<li><a href="https://wa.me/79058229729?text=Сообщение%с%сайта%pavelostatochnikov.ru"><i class="fa fa-whatsapp"></i></a></li>
+				</ul> 
 	      		
 	      </div>
 
       	<div class="col-six tab-full">
 	      	<div class="copyright">
-		        	<span>© Copyright Kards 2016.</span> 
 		        	<span>Design by <a href="http://www.styleshout.com/">styleshout</a></span>	         	
 		         </div>		                  
 	      	</div>
