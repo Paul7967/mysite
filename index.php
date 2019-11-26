@@ -15,7 +15,16 @@
 		elseif (strpos($default_lang, "en") !== false) return "en";
 	}
 	
-
+	function ToggleLanguage() {
+		$language = htmlspecialchars($_COOKIE["language"]);
+			if($language=='ru')
+			{
+				// document.cookie = 'language=en';
+				setcookie("language", 'en');
+			} else {
+				setcookie("language", 'ru');
+			}
+	}
 	
 
 	// $my_lang = $_COOKIE['mylang'];
@@ -71,29 +80,43 @@
 
 	<!-- header 
    ================================================== -->
-   <header>   	
-   	<div class="row">
+   	<header>   	
+	   	<form method="post" class="btn_chg_lng " >
+			<input 
+				type="submit" 
+				name="set_ru_lang" 
+				class="button stroke" 
+				value=<?=$lang->get("HEADER_BTN_LANG") ?> 
+				onclick="return foo();" />
+				<script> function foo() {
+					(document.cookie==='language=en' ? document.cookie='language=ru' : document.cookie='language=en');
+					return true;
+				} </script>
+			
+		</form>
 
-   		<div class="top-bar">
-   			<a class="menu-toggle" href="#"><span><?=$lang->get("HEADER_MENU-TOGGLE_SPAN") ?></span></a>
+		<div class="row">
 
-	   		<!-- <div class="logo"> -->
-		         <!-- <a href="index.php">Меню</a> -->
-		      <!-- </div>		       -->
+			<div class="top-bar">
+				<a class="menu-toggle" href="#"><span><?=$lang->get("HEADER_MENU-TOGGLE_SPAN") ?></span></a>
 
-		   	<nav id="main-nav-wrap">
-					<ul class="main-navigation">
-						<li class="current"><a class="smoothscroll"  href="#intro" title=""><?=$lang->get("HEADER_MAIN-NAVIGATION_LI_HOME") ?></a></li>
-						<li><a class="smoothscroll"  href="#about" title=""><?=$lang->get("HEADER_MAIN-NAVIGATION_LI_ABOUT") ?></a></li>
-						<li><a class="smoothscroll"  href="#resume" title=""><?=$lang->get("HEADER_MAIN-NAVIGATION_LI_RESUME") ?></a></li>
-						<li><a class="smoothscroll"  href="#portfolio" title=""><?=$lang->get("HEADER_MAIN-NAVIGATION_LI_PORTOLIO") ?></a></li>
-						<li><a class="smoothscroll"  href="#services" title=""><?=$lang->get("HEADER_MAIN-NAVIGATION_LI_SERVICES") ?></a></li>					
-						<li><a class="smoothscroll"  href="#contact" title=""><?=$lang->get("HEADER_MAIN-NAVIGATION_LI_CONTACTS") ?></a></li>	
-					</ul>
-				</nav>    		
-   		</div> <!-- /top-bar --> 
-   		
-   	</div> <!-- /row --> 		
+				<!-- <div class="logo"> -->
+					<!-- <a href="index.php">Меню</a> -->
+				<!-- </div>		       -->
+
+				<nav id="main-nav-wrap">
+						<ul class="main-navigation">
+							<li class="current"><a class="smoothscroll"  href="#intro" title=""><?=$lang->get("HEADER_MAIN-NAVIGATION_LI_HOME") ?></a></li>
+							<li><a class="smoothscroll"  href="#about" title=""><?=$lang->get("HEADER_MAIN-NAVIGATION_LI_ABOUT") ?></a></li>
+							<li><a class="smoothscroll"  href="#resume" title=""><?=$lang->get("HEADER_MAIN-NAVIGATION_LI_RESUME") ?></a></li>
+							<li><a class="smoothscroll"  href="#portfolio" title=""><?=$lang->get("HEADER_MAIN-NAVIGATION_LI_PORTOLIO") ?></a></li>
+							<li><a class="smoothscroll"  href="#services" title=""><?=$lang->get("HEADER_MAIN-NAVIGATION_LI_SERVICES") ?></a></li>					
+							<li><a class="smoothscroll"  href="#contact" title=""><?=$lang->get("HEADER_MAIN-NAVIGATION_LI_CONTACTS") ?></a></li>	
+						</ul>
+					</nav>    		
+			</div> <!-- /top-bar --> 
+			
+		</div> <!-- /row --> 		
    </header> <!-- /header -->
 
 	<!-- intro section
@@ -115,10 +138,6 @@
 	   			</p>
 
 	   			<a class="button stroke smoothscroll" href="#about" title=""><?=$lang->get("INTRO_ABOUT_BTN") ?></a>
-				<form method="post">
-					<input type="submit" name="set_en_lang" value="English" onclick="document.cookie = 'language=en'"/>
-					<input type="submit" name="set_ru_lang" value="Русский" onclick="document.cookie = 'language=ru'"/>
-				</form>
 	   		</div>  
    			
    		</div>   		 		

@@ -652,6 +652,15 @@ label > input[type="checkbox"], label > input[type="radio"] {
  *
  * ------------------------------------------------------------------- 
  */
+.btn_chg_lng {
+	position: absolute;
+	right: 10px;
+	top: 10px;
+	z-index: 700;
+}
+
+
+
 .button,
 a.button,
 button,
@@ -681,6 +690,14 @@ input[type="button"] {
 	-ms-transition: all 0.3s ease-in-out;
 	transition: all 0.3s ease-in-out;
 }
+
+.btn_chg_lng input {
+	width: 60px;
+	padding: 0 0;
+	color: #cc005f;
+}
+
+
 .button:hover,
 a.button:hover,
 button:hover,
