@@ -15,17 +15,6 @@
 		elseif (strpos($default_lang, "en") !== false) return "en";
 	}
 	
-	function ToggleLanguage() {
-		$language = htmlspecialchars($_COOKIE["language"]);
-			if($language=='ru')
-			{
-				// document.cookie = 'language=en';
-				setcookie("language", 'en');
-			} else {
-				setcookie("language", 'ru');
-			}
-	}
-	
 
 	// $my_lang = $_COOKIE['mylang'];
 	if(isset($_COOKIE["language"]))
@@ -72,7 +61,7 @@
 
    <!-- favicons
 	================================================== -->
-	<link rel="icon" type="image/png" href="favicon.png">
+	<link rel="icon" type="image/png" href="favicon.ico">
 
 </head>
 
@@ -87,8 +76,8 @@
 				name="set_ru_lang" 
 				class="button stroke" 
 				value=<?=$lang->get("HEADER_BTN_LANG") ?> 
-				onclick="return foo();" />
-				<script> function foo() {
+				onclick="return ChangeLng();" />
+				<script> function ChangeLng() {
 					(document.cookie==='language=en' ? document.cookie='language=ru' : document.cookie='language=en');
 					return true;
 				} </script>
@@ -105,15 +94,14 @@
 				<!-- </div>		       -->
 
 				<nav id="main-nav-wrap">
-						<ul class="main-navigation">
-							<li class="current"><a class="smoothscroll"  href="#intro" title=""><?=$lang->get("HEADER_MAIN-NAVIGATION_LI_HOME") ?></a></li>
-							<li><a class="smoothscroll"  href="#about" title=""><?=$lang->get("HEADER_MAIN-NAVIGATION_LI_ABOUT") ?></a></li>
-							<li><a class="smoothscroll"  href="#resume" title=""><?=$lang->get("HEADER_MAIN-NAVIGATION_LI_RESUME") ?></a></li>
-							<li><a class="smoothscroll"  href="#portfolio" title=""><?=$lang->get("HEADER_MAIN-NAVIGATION_LI_PORTOLIO") ?></a></li>
-							<li><a class="smoothscroll"  href="#services" title=""><?=$lang->get("HEADER_MAIN-NAVIGATION_LI_SERVICES") ?></a></li>					
-							<li><a class="smoothscroll"  href="#contact" title=""><?=$lang->get("HEADER_MAIN-NAVIGATION_LI_CONTACTS") ?></a></li>	
-						</ul>
-					</nav>    		
+					<ul class="main-navigation">
+						<li class="current"><a class="smoothscroll"  href="#intro" title=""><?=$lang->get("HEADER_MAIN-NAVIGATION_LI_HOME") ?></a></li>
+						<li><a class="smoothscroll"  href="#about" title=""><?=$lang->get("HEADER_MAIN-NAVIGATION_LI_ABOUT") ?></a></li>
+						<li><a class="smoothscroll"  href="#resume" title=""><?=$lang->get("HEADER_MAIN-NAVIGATION_LI_RESUME") ?></a></li>
+						<li><a class="smoothscroll"  href="#portfolio" title=""><?=$lang->get("HEADER_MAIN-NAVIGATION_LI_PORTOLIO") ?></a></li>
+						<li><a class="smoothscroll"  href="#contact" title=""><?=$lang->get("HEADER_MAIN-NAVIGATION_LI_CONTACTS") ?></a></li>	
+					</ul>
+				</nav>    		
 			</div> <!-- /top-bar --> 
 			
 		</div> <!-- /row --> 		
@@ -185,21 +173,29 @@
    					<strong><?=$lang->get("ABOUT_LI_FIO_LABEL") ?></strong>
    					<span><?=$lang->get("ABOUT_LI_FIO_VALUE") ?></span>
    				</li>
+				<li>
+					<strong><?=$lang->get("ABOUT_LI_WORK_LABEL") ?></strong>
+					<span><?=$lang->get("ABOUT_LI_WORK_VALUE") ?></span>
+				</li>
    				<li>
    					<strong><?=$lang->get("ABOUT_LI_BIRTH_DATE_LABEL") ?></strong>
    					<span><?=$lang->get("ABOUT_LI_BIRTH_DATE_VALUE") ?></span>
-   				</li>
-   				<li>
-   					<strong><?=$lang->get("ABOUT_LI_WORK_LABEL") ?></strong>
-   					<span><?=$lang->get("ABOUT_LI_WORK_VALUE") ?></span>
-   				</li>
-   				<li>
+				</li>
+				<li>
    					<strong><?=$lang->get("ABOUT_LI_SITE_LABEL") ?></strong>
-   					<span><?=$lang->get("ABOUT_LI_SITE_VALUE") ?></span>
+					<a href=<?=$lang->get("ABOUT_LI_SITE_VALUE") ?> target="_blank"><span><?=$lang->get("ABOUT_LI_SITE_VALUE") ?></span></a>
    				</li>
    				<li>
    					<strong><?=$lang->get("ABOUT_LI_EMAIL_LABEL") ?></strong>
    					<span><?=$lang->get("ABOUT_LI_EMAIL_VALUE") ?></span>
+   				</li>
+   				<li>
+   					<strong><?=$lang->get("ABOUT_LI_PHONE_LABEL") ?></strong>
+   					<span><?=$lang->get("ABOUT_LI_PHONE_VALUE") ?></span>
+   				</li>
+   				<li>
+   					<strong><?=$lang->get("ABOUT_LI_CITY_LABEL") ?></strong>
+   					<span><?=$lang->get("ABOUT_LI_CITY_VALUE") ?></span>
    				</li>
 
    			</ul> <!-- /info-list -->
@@ -212,24 +208,37 @@
    			<p><?=$lang->get("ABOUT_SKILLS_P") ?></p>
 
 				<ul class="skill-bars">
+				
 				   <li>
-				   	<div class="progress percent65"><span>65%</span></div>
-				   	<strong>HTML5</strong>
-				   </li>
-				   <li>
-				   	<div class="progress percent55"><span>55%</span></div>
-				   	<strong>CSS3</strong>
-				   </li>
-				   <li>
-				   	<div class="progress percent55"><span>55%</span></div>
-				   	<strong>JavaScript</strong>
-				   </li>
-				   <li>
-				   	<div class="progress percent60"><span>60%</span></div>
-				   	<strong>React</strong>
-				   </li>
+						<div class="progress percent65"><span>65%</span></div>
+						<strong>HTML5</strong>
+				   	</li>
+				   	<li>
+						<div class="progress percent55"><span>55%</span></div>
+						<strong>CSS3</strong>
+				   	</li>
+				   	<li>
+						<div class="progress percent60"><span>60%</span></div>
+						<strong>JavaScript (ES6)</strong>
+				   	</li>
+				   	<li>
+						<div class="progress percent60"><span>60%</span></div>
+						<strong>React</strong>
+				   	</li>
+				   	
       
-				</ul> <!-- /skill-bars -->		
+				</ul> <!-- /skill-bars -->	
+				<p><?=$lang->get("ABOUT_SOFT-SKILLS_P") ?></p>
+				<ul class="skill-bars">	
+					<li>
+						<div class="progress percent85"><span>85%</span></div>
+						<strong><?=$lang->get("ABOUT_SKILLS_LI_1") ?></strong>
+				   	</li>
+					<li>
+						<div class="progress percent90"><span>90%</span></div>
+						<strong><?=$lang->get("ABOUT_SKILLS_LI_2") ?></strong>
+				   	</li>
+				</ul>
 
    		</div>
 
@@ -238,7 +247,7 @@
    	<div class="row button-section">
    		<div class="col-twelve">
    			<a href="#contact" title="Hire Me" class="button stroke smoothscroll"><?=$lang->get("ABOUT_BUTTON-SECTION_HIRE_ME") ?></a>
-   			<a href="#" title="Download CV" class="button button-primary"><?=$lang->get("ABOUT_BUTTON-SECTION_DOWNLOAD_CV") ?></a>
+   			<a href="<?=$lang->get("PORTFOLIO_A_RESUME_LINK") ?>" title="Download CV" class="button button-primary" download><?=$lang->get("ABOUT_BUTTON-SECTION_DOWNLOAD_CV") ?></a>
    		</div>   		
    	</div>
 
@@ -841,54 +850,6 @@
 
 			</div> 
 		</div> <!-- /section-intro -->
-
-		<div class="row contact-form"style="display: none"> 
-		 <!-- отключил этот фрагмент через display: none -->
-
-			<div class="col-twelve">
-
-				<!-- form -->
-				<form name="contactForm" id="contactForm" method="post" action="">
-					<fieldset>
-
-					<div class="form-field">
-							<input name="contactName" type="text" id="contactName" placeholder="<?=$lang->get("CONTACT_FORM_PLACEHOLDER_NAME") ?>" value="" minlength="2" required="">
-					</div>
-					<div class="form-field">
-						<input name="contactEmail" type="email" id="contactEmail" placeholder="<?=$lang->get("CONTACT_FORM_PLACEHOLDER_EMAIL") ?>" value="" required="">
-					</div>
-					<div class="form-field">
-							<input name="contactSubject" type="text" id="contactSubject" placeholder="<?=$lang->get("CONTACT_FORM_PLACEHOLDER_SUBJECT") ?>" value="">
-					</div>                       
-					<div class="form-field">
-							<textarea name="contactMessage" id="contactMessage" placeholder="<?=$lang->get("CONTACT_FORM_PLACEHOLDER_MESSAGE") ?>" rows="10" cols="50" required=""></textarea>
-					</div>                      
-					<div class="form-field">
-						<button class="submitform"><?=$lang->get("CONTACT_FORM_BUTTON_SUBMIT") ?></button>
-						<div id="submit-loader">
-							<div class="text-loader"><?=$lang->get("CONTACT_FORM_TEXT-LOADER") ?></div>                             
-							<div class="s-loader">
-										<div class="bounce1"></div>
-										<div class="bounce2"></div>
-										<div class="bounce3"></div>
-									</div>
-								</div>
-					</div>
-
-					</fieldset>
-				</form> <!-- Form End -->
-
-				<!-- contact-warning -->
-				<div id="message-warning">            	
-				</div>            
-				<!-- contact-success -->
-				<div id="message-success">
-					<i class="fa fa-check"></i><?=$lang->get("CONTACT_FORM_MESSAGE-SUCCESS") ?><br>
-				</div>
-
-			</div> <!-- /col-twelve -->
-			
-		</div> <!-- /contact-form -->
 
 		<div class="row contact-info">
 
