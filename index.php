@@ -335,6 +335,24 @@
 
 	   			</div> <!-- /timeline-block -->
 
+	   			<div class="timeline-block">
+
+	   				<div class="timeline-ico">
+	   					<i class="fa fa-briefcase"></i>
+	   				</div>
+
+	   				<div class="timeline-header">
+	   					<h3><?=$lang->get("RESUME_WORK-EXPERIENCE_4_POSITION") ?></h3>
+	   					<p><?=$lang->get("RESUME_WORK-EXPERIENCE_4_PERIOD") ?></p>
+	   				</div>
+
+	   				<div class="timeline-content">
+	   					<h4><?=$lang->get("RESUME_WORK-EXPERIENCE_4_PLACE") ?></h4>
+	   					<p><?=$lang->get("RESUME_WORK-EXPERIENCE_4_DESCR") ?></p>
+	   				</div>
+
+	   			</div> <!-- /timeline-block -->
+
    			</div> <!-- /timeline-wrap -->   			
 
    		</div> <!-- /col-twelve -->
@@ -803,7 +821,7 @@
 						</div>
 
 						<h3 class="stat-count">
-							1300
+							1100
 						</h3>
 
 						<h5 class="stat-title">
