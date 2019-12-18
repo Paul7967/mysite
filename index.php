@@ -456,7 +456,7 @@
    			<!-- portfolio-wrapper -->
 	         <div id="folio-wrapper" class="block-1-2 block-mob-full stack">
 
-	         	<div class="bgrid folio-item">
+	         	 <div class="bgrid folio-item">  <!-- ToDoList -->
 					<div class="item-wrap">
 	               		<img src="images/portfolio/1_todo_list.jpg" alt="Todo List">
 						<a href="#modal-01" class="overlay">	                  	           
@@ -472,7 +472,7 @@
 					</div>	               
 				</div> <!-- /folio-item -->
 
-				<div class="bgrid folio-item">
+				<div class="bgrid folio-item">  <!-- StarDB -->
 					<div class="item-wrap">
 						<img src="images/portfolio/2_StarDB.jpg" alt="StarDB screenshot">
 						<a href="#modal-02" class="overlay">              		                  
@@ -488,7 +488,7 @@
 	               	</div>
 				</div> <!-- /folio-item -->
 
-	            <div class="bgrid folio-item">
+	            <div class="bgrid folio-item">  <!-- Pulsometr -->
 	               <div class="item-wrap">
 	               	<img src="images/portfolio/3_pulsometr.jpg"alt="Pulsometr">
 	                  <a href="#modal-03" class="overlay">             		                  
@@ -502,9 +502,9 @@
 	                     </div>                    
 	                  </a>
 	               </div>
-	        		</div> <!-- /folio-item -->
+	        	</div> <!-- /folio-item -->
 
-	            <div class="bgrid folio-item">
+	            <div class="bgrid folio-item">  <!-- Uber -->
 	               <div class="item-wrap">
 	               	<img src="images/portfolio/4_uber.jpg" alt="Uber">
 	                  <a href="#modal-04" class="overlay">                  	                 
@@ -518,14 +518,30 @@
 						</div>                    
 	                  </a>
 	               </div>
-	        		</div> <!-- /folio-item -->     
+	        	</div> <!-- /folio-item -->     
+
+				<div class="bgrid folio-item">  <!-- ReStore -->
+	               <div class="item-wrap">
+	               	<img src="images/portfolio/5_ReStore.jpg" alt="ReStore">
+	                  <a href="#modal-05" class="overlay">                  	                 
+	                     <div class="folio-item-table">
+	                     	<div class="folio-item-cell">
+							 	<h3 class="folio-title"><?=$lang->get("PORTFOLIO_5_TITLE") ?></h3>	     					    
+								<span class="folio-types">
+									<?=$lang->get("PORTFOLIO_5_TYPE") ?>
+								</span>		     		
+							</div>  	                      	
+						</div>                    
+	                  </a>
+	               </div>
+	        	</div> <!-- /folio-item -->     
 
 	            <!-- modal popups - begin
 	            ============================================================= -->
 	            <div id="modal-01" class="popup-modal slider mfp-hide">	
 
 					<div class="media">
-						<img src="images/portfolio/modals/m-1_todo_list.jpg" alt="" />
+						<img src="images/portfolio/modals/m-1_todo_list.jpg" alt="ToDoList" />
 					</div>      	
 
 					<div class="description-box">
@@ -547,7 +563,7 @@
 					<div id="modal-02" class="popup-modal slider mfp-hide">	
 
 				     	<div class="media">
-				     		<img src="images/portfolio/modals/m-2_StarDB.jpg" alt="" />
+				     		<img src="images/portfolio/modals/m-2_StarDB.jpg" alt="StarDB" />
 				     	</div>      	
 
 					   <div class="description-box">
@@ -569,7 +585,7 @@
 				   <div id="modal-03" class="popup-modal slider mfp-hide">	
 
 				     	<div class="media">
-				     		<img src="images/portfolio/modals/m-3_pulsometr.jpg" alt="" />
+				     		<img src="images/portfolio/modals/m-3_pulsometr.jpg" alt="pulsometr" />
 				     	</div>      	
 
 					   	<div class="description-box">
@@ -591,7 +607,7 @@
 				   <div id="modal-04" class="popup-modal slider mfp-hide">	
 
 				     	<div class="media">
-				     		<img src="images/portfolio/modals/m-4_uber.jpg" alt="" />
+				     		<img src="images/portfolio/modals/m-4_uber.jpg" alt="uber" />
 				     	</div>      	
 
 					   	<div class="description-box">
@@ -609,6 +625,28 @@
 			         	</div>		      
 
 				   </div> <!-- /modal-04 -->
+
+				   <div id="modal-05" class="popup-modal slider mfp-hide">	
+
+				     	<div class="media">
+				     		<img src="images/portfolio/modals/m-5_ReStore.jpg" alt="Restore" />
+				     	</div>      	
+
+					   	<div class="description-box">
+					   		<h4><?=$lang->get("PORTFOLIO_MODALS_5_H4") ?></h4>		      
+							<p><?=$lang->get("PORTFOLIO_MODALS_5_P") ?></p>
+							<p>
+								<a href="https://github.com/Paul7967/rr_re-store" target="_blank"><u><?=$lang->get("PORTFOLIO_MODALS_A_GITHUB") ?></u></a>
+							</p>
+					      	<div class="categories"><?=$lang->get("PORTFOLIO_MODALS_5_CATEGORY") ?></div>			               
+					   	</div>
+
+			         	<div class="link-box">
+					      	<a href="http://re-store.pavelostatochnikov.ru/" target="_blank"><?=$lang->get("PORTFOLIO_MODALS_BTN_DETAILS") ?></a>
+							<a href="#" class="popup-modal-dismiss"><?=$lang->get("PORTFOLIO_MODALS_BTN_CLOSE") ?></a>
+			         	</div>		      
+
+				   </div> <!-- /modal-05 -->
 
 				   <!-- modal popups - end
 	            ============================================================= -->
